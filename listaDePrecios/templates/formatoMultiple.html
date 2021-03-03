@@ -1,0 +1,14 @@
+<div class="s-block s-cols-2 rows-gap" style="max-height:150;">
+    <div class="s-ratio-16-9 img-container s-mb-2">
+        <img src="{{ categoria.thumbnailUrl }}" title="{{ categoria.name }}"> 
+    </div>
+    <div class="s-center s-mb-2" style="font-family: montserrat; font-size: 12px; font-color: #9a9b9f;">{{ categoria.name }}</div>
+    <div class="ed-grid s-grid-2 s-mb-2 rows-gap">
+        {% for producto in categoria.productos %}
+            {% if producto.enabled %}
+                <div class="s-to-left s-center" style="font-family: montserrat; font-color: #9a9b9f;font-size: 12px;">{{ producto.sku }}</div>
+                <a class="button s-to-right" style="background-color: #939cab; font-family: montserrat ; font-size:12px; font-weight: bold;" href="{{ producto.url }}">{{ producto.defaultDisplayedPriceFormatted }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.10/ecwid-app-ui.css"/>
+    <link href="https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="settings-page cf">
+        <div class="settings-page__header">
+            <div class="settings-page__titles settings-page__titles--left">
+                <h1 class="settings-page__title">PEDIDOS PENDIENTES DE ENTREGA</h1>
+            </div>
+        </div>
+        <div class="settings-page__body">
+            <div class="named-area">
+                <div class="named-area__header">
+                    <div class="named-area__titles">
+                        <div class="named-area__title">en preparacion</div>
+                    </div>
+                </div>
+                <div class="named-area__body">
+                    <!-- <div class="a-card a-card--normal"> -->
+                        <!-- <div class="a-card-stack"> -->
+                        <div class="a-card a-card--compact a-card--error">  
+                        <div class="a-card__paddings">
+                            <div class="ed-grid s-grid-12 margin-top-2">
+                                <div class="s-cols-1"><strong>Pedido</strong></div>
+                                <div class="s-cols-1"><strong>Envio</strong></div>
+                                <div class="s-cols-3"><strong>Zona</strong></div>
+                                <div class="s-cols-3"><strong>Direccion</strong></div>
+                                <div class="s-cols-2"><strong>Localidad</strong></div>
+                                <div class="s-cols-2"><strong>Estado</strong></div>
+                                
+                                {% for pedido in pedidosPendientes %}
+                                    {% if not 'expreso' in pedido.shippingOption.shippingMethodName|lower %}    
+                                        <div class="s-cols-1"><h2><strong>{{pedido.orderNumber}}</strong></h2></div>
+                                        {% if 'FULL' in pedido.shippingOption.shippingMethodName %}
+                                            <div class="s-cols-1">FULL</div>
+                                        {% else %}
+                                            <div class="s-cols-1">FLEX</div>
+                                        {% endif %}
+                                        <div class="s-cols-3">{{ pedido.shippingOption.shippingMethodName }}</div>
+                                        <div class="s-cols-3">{{ pedido.shippingPerson.street}} - {{ pedido.shippingPerson.city }}</div>
+                                        <div class="s-cols-2">{{ pedido.shippingPerson.stateOrProvinceName }}</div>
+                                        <div class="s-cols-2">{{ pedido.fulfillmentStatus }}</div> 
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                {% for pedido in pedidos %}
+                                    {% if 'expreso' in pedido.shippingOption.shippingMethodName|lower %}    
+                                        <div class="s-cols-1">{{pedido.OrderNumber}}</div>
+                                        {% if 'FULL' in pedido.shippingOption.shippingMethodName %}
+                                            <div class="s-cols-1">FULL</div>
+                                        {% else %}
+                                            <div class="s-cols-1">FLEX</div>
+                                        {% endif %}
+                                        <div class="s-cols-8">{{ pedido.expreso }}</div>
+                                        <div class="s-cols-2">{{ pedido.fulfillmentStatus }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div class="named-area">
+                <div class="named-area__header">
+                    <div class="named-area__titles">
+                        <div class="named-area__title">listos para retirar</div>
+                    </div>
+                </div>
+                <div class="named-area__body">
+                    <!-- <div class="a-card a-card--normal"> -->
+                        <!-- <div class="a-card-stack"> -->
+                        <div class="a-card a-card--compact a-card--success">
+                        <div class="a-card__paddings">  
+                            <div class="ed-grid s-grid-12 margin-top-2">
+                                <div class="s-cols-1">Pedido</div>
+                                <div class="s-cols-1"><strong>Envio</strong></div>
+                                <div class="s-cols-3"><strong>Zona</strong></div>
+                                <div class="s-cols-3"><strong>Direccion</strong></div>
+                                <div class="s-cols-2"><strong>Localidad</strong></div>
+                                <div class="s-cols-2"><strong>Estado</strong></div>
+                                
+                                {% for pedido in pedidosConfirmados %}
+                                    {% if not 'expreso' in pedido.shippingOption.shippingMethodName|lower %}    
+                                        <div class="s-cols-1"><h2><strong>{{pedido.orderNumber}}</strong></h2></div>
+                                        {% if 'FULL' in pedido.shippingOption.shippingMethodName %}
+                                            <div class="s-cols-1">FULL</div>
+                                        {% else %}
+                                            <div class="s-cols-1">FLEX</div>
+                                        {% endif %}
+                                        <div class="s-cols-3">{{ pedido.shippingOption.shippingMethodName }}</div>
+                                        <div class="s-cols-3">{{ pedido.shippingPerson.street}} - {{ pedido.shippingPerson.city }}</div>
+                                        <div class="s-cols-2">{{ pedido.shippingPerson.stateOrProvinceName }}</div>
+                                        <div class="s-cols-2">{{ pedido.fulfillmentStatus }}</div> 
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                {% for pedido in pedidos %}
+                                    {% if 'expreso' in pedido.shippingOption.shippingMethodName|lower %}    
+                                        <div class="s-cols-1">{{pedido.vendorOrderNumber}}</div>
+                                        {% if 'FULL' in pedido.shippingOption.shippingMethodName %}
+                                            <div class="s-cols-1">FULL</div>
+                                        {% else %}
+                                            <div class="s-cols-1">FLEX</div>
+                                        {% endif %}
+                                        <div class="s-cols-8">{{ pedido.expreso }}</div>
+                                        <div class="s-cols-2">{{ pedido.fulfillmentStatus }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js">script>    
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.css"/>
+</head>
+<body>
+<div class="settings-page cf">
+	<div class="settings-page__header" style="padding-bottom: .1px">
+		<div class="named-area">
+			<div class="named-area__header">
+				<div class="named-area__titles">
+					<div class="named-area__title">Manual setup</div>
+					<div class="named-area__subtitle"></div>
+				</div>
+			</div>
+			<div class="named-area__body">
+				<div class="payment-card">
+					<div class="payment-card__main">
+						<div class="payment-card__header">
+							<div class="payment-card__logo">
+								<svg xmlns="http://www.w3.org/2000/svg" width="118" height="29" viewBox="0 0 118 29" focusable="false">
+									<path fill="#179BD7" d="M90.873 6.485h-6.49c-.442 0-.82.327-.89.77L80.87 24.11c-.052.333.202.633.535.633h3.33c.31 0 .573-.227.622-.538l.744-4.778c.07-.444.448-.77.89-.77h2.054c4.274 0 6.74-2.096 7.385-6.248.29-1.816.01-3.243-.83-4.242-.92-1.098-2.556-1.68-4.727-1.68zm.75 6.155C91.266 15 89.487 15 87.767 15h-.98l.688-4.405c.04-.267.268-.463.534-.463h.448c1.172 0 2.278 0 2.848.676.34.404.445 1.004.316 1.832z"></path>
+									<path fill="#253B80" d="M44.596 6.485h-6.488c-.444 0-.822.327-.89.77L34.592 24.11c-.05.333.202.633.535.633h3.098c.443 0 .82-.326.89-.77l.708-4.546c.07-.444.447-.77.89-.77h2.054c4.273 0 6.74-2.096 7.384-6.248.29-1.816.012-3.243-.827-4.242-.923-1.098-2.56-1.68-4.73-1.68zm.75 6.155C44.99 15 43.21 15 41.49 15h-.978l.687-4.405c.04-.267.267-.463.533-.463h.45c1.17 0 2.276 0 2.846.676.34.404.444 1.004.315 1.832zM63.99 12.565H60.88c-.266 0-.493.196-.534.462l-.137.88-.216-.32c-.673-.988-2.173-1.32-3.67-1.32-3.432 0-6.365 2.636-6.935 6.33-.298 1.845.123 3.607 1.155 4.836.948 1.13 2.3 1.6 3.913 1.6 2.767 0 4.302-1.8 4.302-1.8l-.14.875c-.05.332.203.633.535.633h2.798c.443 0 .82-.325.89-.77l1.68-10.772c.052-.333-.202-.633-.534-.633zm-4.33 6.125c-.3 1.798-1.71 3.005-3.508 3.005-.9 0-1.622-.293-2.086-.85-.46-.55-.633-1.335-.487-2.21.28-1.782 1.71-3.028 3.48-3.028.883 0 1.6.297 2.072.858.476.565.663 1.355.527 2.225z"></path>
+									<path fill="#179BD7" d="M110.266 12.565h-3.107c-.267 0-.494.196-.535.462l-.137.88-.217-.32c-.672-.988-2.172-1.32-3.67-1.32-3.43 0-6.364 2.636-6.934 6.33-.297 1.845.124 3.607 1.156 4.836.948 1.13 2.3 1.6 3.913 1.6 2.767 0 4.3-1.8 4.3-1.8l-.137.875c-.052.332.2.633.534.633h2.798c.443 0 .82-.326.89-.77L110.8 13.2c.052-.333-.202-.633-.534-.633zm-4.33 6.125c-.3 1.798-1.71 3.005-3.507 3.005-.902 0-1.623-.293-2.087-.85-.46-.55-.633-1.335-.487-2.21.28-1.782 1.712-3.028 3.482-3.028.882 0 1.6.297 2.07.858.477.565.664 1.355.528 2.225z"></path>
+									<path fill="#253B80" d="M80.536 12.565h-3.123c-.298 0-.578.15-.745.4L72.36 19.39l-1.826-6.174c-.114-.386-.465-.65-.863-.65H66.6c-.37-.002-.63.368-.51.723l3.438 10.223-3.235 4.622c-.254.363.003.865.442.865h3.12c.295 0 .572-.147.74-.393L80.98 13.425c.25-.364-.008-.86-.444-.86z"></path>
+									<path fill="#179BD7" d="M113.928 6.948l-2.663 17.16c-.052.333.202.633.534.633h2.677c.444 0 .82-.326.89-.77l2.626-16.852c.052-.332-.202-.633-.534-.633h-2.998c-.266 0-.493.196-.534.463z"></path>
+									<g>
+										<path fill="#253B80" d="M12.292 27.805l.872-5.602.056-.31c.042-.27.18-.517.384-.695.206-.178.468-.276.74-.276h.69c1.155 0 2.216-.125 3.154-.37 1-.264 1.89-.673 2.644-1.216.8-.576 1.47-1.32 1.996-2.213.554-.94.96-2.074 1.21-3.367.22-1.142.26-2.165.122-3.04-.146-.923-.498-1.712-1.044-2.343-.332-.382-.756-.714-1.26-.985l-.013-.007v-.013c.176-1.14.17-2.09-.02-2.91-.19-.82-.577-1.558-1.182-2.255C19.39.756 17.11.022 13.87.022H4.972c-.297 0-.586.11-.812.305-.226.195-.377.467-.423.765l-3.705 23.8c-.034.217.027.437.17.604.14.167.345.263.562.263h5.52l-.004.026-.38 2.435c-.03.19.025.382.147.528.123.145.302.23.49.23h4.632c.258 0 .51-.095.707-.266.198-.17.33-.408.37-.668l.045-.24z"></path>
+										<path fill="#253B80" d="M9.12 7.398c.058-.377.297-.686.62-.842.145-.07.308-.11.48-.11h6.975c.826 0 1.596.054 2.3.17.202.032.398.07.588.113.19.04.375.09.554.142.09.027.178.054.264.083.347.117.67.254.965.413.35-2.256-.002-3.79-1.207-5.18C19.332.655 16.936 0 13.87 0H4.973c-.626 0-1.16.462-1.257 1.09L.01 24.887c-.074.47.285.894.754.894h5.493l1.38-8.863L9.12 7.397z"></path>
+										<path fill="#179BD7" d="M21.865 7.368c-.026.172-.056.347-.09.528-1.174 6.102-5.19 8.212-10.317 8.212h-2.61c-.627 0-1.156.462-1.254 1.09L6.257 25.78l-.38 2.436c-.063.41.25.782.66.782h4.63c.55 0 1.016-.404 1.102-.952l.044-.24.872-5.6.056-.31c.086-.55.552-.953 1.1-.953h.693c4.486 0 7.998-1.846 9.025-7.185.43-2.23.207-4.093-.927-5.402-.343-.396-.77-.723-1.268-.99z"></path>
+										<path fill="#222D65" d="M20.637 6.872c-.18-.053-.363-.1-.554-.144-.19-.042-.386-.08-.587-.113-.705-.115-1.475-.17-2.3-.17H10.22c-.172 0-.335.04-.48.11-.323.157-.562.466-.62.843l-1.483 9.52-.043.28c.098-.628.627-1.09 1.253-1.09h2.61c5.13 0 9.144-2.11 10.317-8.212.035-.18.064-.356.09-.528-.295-.16-.617-.296-.963-.413-.086-.03-.174-.056-.263-.083z"></path>
+									</g>
+								</svg>
+							</div>
+							<div class="payment-card__credit-cards">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+									<path fill="#002F87" d="M24.3 18.22c.09-.57.46-1.04.95-1.28.22-.11.48-.17.74-.17h10.72c1.27 0 2.45.08 3.54.26.31.05.61.11.9.17.29.06.58.14.85.22.14.04.27.08.41.13.53.18 1.03.38 1.48.63.54-3.42 0-5.75-1.85-7.86C40 7.99 36.32 7 31.6 7H17.93c-.96 0-1.78.7-1.93 1.65l-5.7 36.11c-.11.71.44 1.36 1.16 1.36h8.44l2.12-13.45 2.28-14.45z"></path>
+									<path fill="#002F87" d="M42.04 10.32C40 7.99 36.32 7 31.6 7H17.93c-.96 0-1.78.7-1.93 1.65l-5.7 36.11c-.11.71.44 1.36 1.16 1.36h8.44l2.12-13.45-.07.42c.15-.95.96-1.65 1.93-1.65h4.01c7.88 0 14.05-3.2 15.85-12.46.05-.27.1-.54.14-.8.55-3.42.01-5.75-1.84-7.86z"></path>
+									<path fill="#009BDE" d="M43.89 18.18c-.04.26-.09.53-.14.8-1.8 9.26-7.97 12.46-15.85 12.46h-4.01c-.96 0-1.78.7-1.93 1.65L19.9 46.12l-.58 3.7c-.1.62.38 1.18 1.02 1.18h7.12c.84 0 1.56-.61 1.69-1.44l.07-.36 1.34-8.5.09-.47c.13-.83.85-1.44 1.69-1.44h1.06c6.89 0 12.29-2.8 13.87-10.9.66-3.38.32-6.21-1.42-8.2-.54-.61-1.19-1.11-1.96-1.51z"></path>
+									<path fill="#022169" d="M42 17.43c-.27-.08-.56-.15-.85-.22-.29-.06-.59-.12-.9-.17-1.08-.17-2.27-.26-3.54-.26H25.99c-.26 0-.51.06-.74.17-.49.24-.86.71-.95 1.28l-2.28 14.45-.07.42c.15-.95.96-1.65 1.93-1.65h4.01c7.88 0 14.05-3.2 15.85-12.46.05-.27.1-.54.14-.8-.46-.24-.95-.45-1.48-.63-.12-.05-.26-.09-.4-.13z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 26"><path fill="#F7B600" d="M1 22h38v3H1z"></path>
+									<path fill="#1A1F71" d="M1 1h38v3H1zM15.46 8l-4.13 9.84H8.64L6.61 9.99c-.12-.48-.23-.66-.61-.86-.61-.34-1.62-.65-2.51-.84L3.55 8h4.33c.55 0 1.05.37 1.17 1l1.07 5.7L12.78 8h2.68zM26 14.63c.01-2.6-3.59-2.74-3.57-3.9.01-.35.34-.73 1.08-.82.36-.05 1.37-.08 2.51.44l.45-2.09c-.61-.22-1.4-.43-2.38-.43-2.52 0-4.29 1.34-4.3 3.25-.02 1.42 1.26 2.21 2.23 2.68.99.48 1.33.79 1.32 1.22-.01.66-.79.95-1.52.96-1.28.02-2.02-.35-2.61-.62l-.46 2.16c.6.27 1.69.51 2.83.52 2.66 0 4.41-1.32 4.42-3.37m6.65 3.22H35L32.94 8h-2.17c-.49 0-.9.28-1.08.72l-3.82 9.12h2.67l.53-1.47h3.27l.31 1.48zm-2.85-3.49l1.34-3.7.77 3.7H29.8zM19.09 8l-2.1 9.84h-2.55L16.55 8h2.54z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 26">
+									<path fill="#FF5F00" d="M14.59 3.21h10.82v19.44H14.59z"></path>
+									<path fill="#EB001B" d="M15.28 12.93c0-3.94 1.85-7.46 4.72-9.72A12.28 12.28 0 0012.36.57C5.53.56 0 6.1 0 12.93c0 6.83 5.53 12.36 12.36 12.36 2.88 0 5.54-.99 7.64-2.64a12.341 12.341 0 01-4.72-9.72z"></path>
+									<path fill="#F79E1B" d="M40 12.93c0 6.83-5.53 12.36-12.36 12.36-2.88 0-5.54-.99-7.64-2.64 2.88-2.26 4.72-5.78 4.72-9.72S22.88 5.47 20 3.21A12.28 12.28 0 0127.64.57C34.47.56 40 6.1 40 12.93z"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="payment-card__title">Accept PayPal and card payments on your website</div>
+						<div class="payment-card__content">
+							<div class="form-area">
+								<div class="form-area__content">
+									<p>To start accepting payments, enter the email address where your payments should be sent. This email address should be the same one associated with your PayPal account. If you don’t have a PayPal account, you can set it up later using the same email address that you’ve provided here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="payment-card__action">
+							<div class="form-area">
+								<div class="columned">
+									<div class="columned__item">
+										<div class="form-area__title">Your PayPal account:</div>
+										<div class="form-area__content">
+											<div class="fieldsets-batch">
+												<div class="fieldset" aria-hidden="true">
+													<div class="fieldset__field-wrapper">
+														<div class="field field--medium field--filled">
+															<span class="fieldset__svg-icon"></span>
+															<label class="field__label">Your PayPal email address</label>
+															<input type="text" class="field__input" tabindex="4" maxlength="64" value="example@mail.com">
+															<div class="field__placeholder">Your PayPal email address</div>
+															<span class="field-state--success"><svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 26 26" focusable="false"><path d="M5 12l5.02 4.9L21.15 4c.65-.66 1.71-.66 2.36 0 .65.67.65 1.74 0 2.4l-12.3 14.1c-.33.33-.76.5-1.18.5-.43 0-.86-.17-1.18-.5l-6.21-6.1c-.65-.66-.65-1.74 0-2.41.65-.65 1.71-.65 2.36.01z"></path></svg></span>
+															<span class="field-state--close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve" focusable="false"><path d="M15.6,15.5c-0.53,0.53-1.38,0.53-1.91,0L8.05,9.87L2.31,15.6c-0.53,0.53-1.38,0.53-1.91,0 c-0.53-0.53-0.53-1.38,0-1.9l5.65-5.64L0.4,2.4c-0.53-0.53-0.53-1.38,0-1.91c0.53-0.53,1.38-0.53,1.91,0l5.64,5.63l5.74-5.73 c0.53-0.53,1.38-0.53,1.91,0c0.53,0.53,0.53,1.38,0,1.91L9.94,7.94l5.66,5.65C16.12,14.12,16.12,14.97,15.6,15.5z"></path></svg></span>
+														</div>
+													</div>
+													<div class="field__error" aria-hidden="true" style="display: none;"></div>
+													<div class="fieldset__note" aria-hidden="true" style="display: none;"></div>
+												</div>
+												<div class="fieldset">
+													<div class="fieldset__field-wrapper">
+														<div class="field field--medium">
+															<span class="fieldset__svg-icon"></span>
+															<label class="field__label">API Login Id</label>
+															<input type="text" class="field__input">
+															<div class="field__placeholder">API Login Id</div>
+															<span class="field-state--success"><svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 26 26" focusable="false"><path d="M5 12l5.02 4.9L21.15 4c.65-.66 1.71-.66 2.36 0 .65.67.65 1.74 0 2.4l-12.3 14.1c-.33.33-.76.5-1.18.5-.43 0-.86-.17-1.18-.5l-6.21-6.1c-.65-.66-.65-1.74 0-2.41.65-.65 1.71-.65 2.36.01z"></path></svg></span>
+															<span class="field-state--close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve" focusable="false"><path d="M15.6,15.5c-0.53,0.53-1.38,0.53-1.91,0L8.05,9.87L2.31,15.6c-0.53,0.53-1.38,0.53-1.91,0 c-0.53-0.53-0.53-1.38,0-1.9l5.65-5.64L0.4,2.4c-0.53-0.53-0.53-1.38,0-1.91c0.53-0.53,1.38-0.53,1.91,0l5.64,5.63l5.74-5.73 c0.53-0.53,1.38-0.53,1.91,0c0.53,0.53,0.53,1.38,0,1.91L9.94,7.94l5.66,5.65C16.12,14.12,16.12,14.97,15.6,15.5z"></path></svg></span>
+														</div>
+														<div class="fieldset__field-prefix"></div>
+													</div>
+													<div class="field__error" aria-hidden="true" style="display: none;"></div>
+													<div class="fieldset__note" aria-hidden="true" style="display: none;"></div>
+												</div>
+												<div class="fieldset">
+													<div class="fieldset__field-wrapper">
+														<div class="field field--medium">
+															<span class="fieldset__svg-icon"></span>
+															<label class="field__label">MD5 Hash Value</label>
+															<input type="text" class="field__input">
+															<div class="field__placeholder">MD5 Hash Value</div>
+															<span class="field-state--success"><svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 26 26" focusable="false"><path d="M5 12l5.02 4.9L21.15 4c.65-.66 1.71-.66 2.36 0 .65.67.65 1.74 0 2.4l-12.3 14.1c-.33.33-.76.5-1.18.5-.43 0-.86-.17-1.18-.5l-6.21-6.1c-.65-.66-.65-1.74 0-2.41.65-.65 1.71-.65 2.36.01z"></path></svg></span><span class="field-state--close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve" focusable="false"><path d="M15.6,15.5c-0.53,0.53-1.38,0.53-1.91,0L8.05,9.87L2.31,15.6c-0.53,0.53-1.38,0.53-1.91,0 c-0.53-0.53-0.53-1.38,0-1.9l5.65-5.64L0.4,2.4c-0.53-0.53-0.53-1.38,0-1.91c0.53-0.53,1.38-0.53,1.91,0l5.64,5.63l5.74-5.73 c0.53-0.53,1.38-0.53,1.91,0c0.53,0.53,0.53,1.38,0,1.91L9.94,7.94l5.66,5.65C16.12,14.12,16.12,14.97,15.6,15.5z"></path></svg></span>
+														</div>
+														<div class="fieldset__field-prefix"></div>
+														<div class="fieldset__field-suffix"></div>
+													</div>
+													<div class="field__error" aria-hidden="true" style="display: none;"></div>
+													<div class="fieldset__note" aria-hidden="true" style="display: none;"></div>
+												</div>
+											</div>
+											<div class="inline-alert inline-alert--error">This payment processor accepts only Australian Dollar, Hong Kong dollar, Malaysian Ringgit.</div>
+										</div>
+										<div class="collapsible">
+											<div class="collapsible__header">Advanced settings</div>
+											<div class="collapsible__body">
+												<div class="form-area__content">
+													<div class="fieldsets-batch">
+														<div class="fieldset">
+															<div class="fieldset__field-wrapper">
+																<div class="field field--medium field--filled">
+																	<span class="fieldset__svg-icon"></span>
+																	<label class="field__label">Endpoint URL</label>
+																	<input type="text" class="field__input" value="https://secure2.authorize.net/gateway/transact.dll">
+																	<div class="field__placeholder">Endpoint URL</div>
+																	<span class="field-state--success"><svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 26 26" focusable="false"><path d="M5 12l5.02 4.9L21.15 4c.65-.66 1.71-.66 2.36 0 .65.67.65 1.74 0 2.4l-12.3 14.1c-.33.33-.76.5-1.18.5-.43 0-.86-.17-1.18-.5l-6.21-6.1c-.65-.66-.65-1.74 0-2.41.65-.65 1.71-.65 2.36.01z"></path></svg></span>
+																	<span class="field-state--close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve" focusable="false"><path d="M15.6,15.5c-0.53,0.53-1.38,0.53-1.91,0L8.05,9.87L2.31,15.6c-0.53,0.53-1.38,0.53-1.91,0 c-0.53-0.53-0.53-1.38,0-1.9l5.65-5.64L0.4,2.4c-0.53-0.53-0.53-1.38,0-1.91c0.53-0.53,1.38-0.53,1.91,0l5.64,5.63l5.74-5.73 c0.53-0.53,1.38-0.53,1.91,0c0.53,0.53,0.53,1.38,0,1.91L9.94,7.94l5.66,5.65C16.12,14.12,16.12,14.97,15.6,15.5z"></path></svg></span>
+																</div>
+																<div class="fieldset__field-prefix"></div>
+																<div class="fieldset__field-suffix"></div>
+															</div>
+															<div class="field__error" aria-hidden="true" style="display: none;"></div>
+															<div class="fieldset__note">Use this option to emulate the Authorize.Net SIM API. See details in our <a target="_blank">Help Center</a>.
+															</div>
+														</div>
+														<button type="button" class="btn btn-default btn-medium">Revert to default</button>
+													</div>
+												</div>
+												<div class="form-area__content">
+													<div class="custom-checkbox">
+														<label>
+															<input type="checkbox" value="on" class="custom-checkbox__input">
+															<span class="custom-checkbox__label"></span>
+															<span class="custom-checkbox__text">Enable test mode (no charges)</span>
+														</label>
+														<div class="custom-checkbox__note muted text-small">Please make sure you are using test Alias/Key and Salt values (not production).</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="columned__item columned__item--shifted">
+										<div class="form-area__title">Configure Account</div>
+										<div class="form-area__content">
+											<ul class="bullet">
+												<li>Log in to the PayUbiz web interface</li>
+												<li>Click <b>Settings</b> tab on Dashboard menu bar.</li>
+												<li>Select "Change Alias & View Salt".</li>
+												<li>Copy the values.</li>
+											</ul>
+											<p>In order to enable and use <a target="_blank">Authorize.Net</a> SIM as payment option, you need to fill in the form below.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js">
+</body>
+</html>

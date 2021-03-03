@@ -1,0 +1,81 @@
+{% extends "pedidos/page.html" %}
+{% block content %}
+{% for pedido in pedidos %}
+<div class="a-card-stack">
+    <div class="a-card a-card--normal">
+        <div class="a-card__paddings">	
+            <div class="a-card__paddings a-card__paddings--default-background">
+                <div class="iconable-block iconable-block--hide-in-mobile">
+                    <tr>
+                        <td>
+                            <span class="status-block__title"><strong>#{{ pedido.id }} - {{ pedido.billingPerson.name }}</strong></span>
+                            <p>{{ pedido.billingPerson.street }}, {{ pedido.billingPerson.city }}, {{ pedido.billingPerson.stateOrProvinceName }}, ({{ pedido.billingPerson.postalCode }}), {{ pedido.billingPerson.countryName }}</p>
+                            <p>Telefono: <strong>{{ pedido.billingPerson.phone }}</strong></p>
+                            <p>{{ pedido.shippingOption.shippingMethodName }}</p>
+                            <p>{{ pedido.paymentMethod }}</p>
+                            <div class="collapsible">
+                                <div class="collapsible__header">{{ pedido.items |length }} Items</div>
+                                <div class="collapsible__body">
+                                {% for itemPedido in pedido.items %}
+                                <div class="iconable-block iconable-block--hide-in-mobile">
+                                    <div class="iconable-block__infographics">
+                                        <span class="iconable-block__icon">
+                                            <a class="order-product__thumbnail">
+                                                <div class="gwt-Label product-placeholder colored-background-3" style="display: none;" aria-hidden="true"></div>
+                                                <img class="gwt-Image" src="{{ itemPedido.smallThumbnailUrl }}">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="status-block__content">
+                                        <p><span class="card__text-indent">
+                                            <strong>{{ itemPedido.sku }}<br>
+                                            {{ itemPedido.quantity }} x {{ itemPedido.priceWithoutTax }}</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="status-block__2">
+                                        <p><span class="card__text-indent">
+                                            <strong>{{ itemPedido.name }}</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="status-block__3">
+                                        <p><span class="card__text-indent">
+                                            {% for opcionSeleccionada in itemPedido.selectedOptions %}
+                                                <strong>{{ opcionSeleccionada.name }}:</strong> {{ opcionSeleccionada.value }}<br>
+                                            {% endfor %}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=""><br></div>
+                                {% endfor %}
+                            </div>
+                        </td>
+                        <td>
+                            <p><span class="card__text-indent">
+                                <strong>{{ itemPedido.name }}</strong><br>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </div>
+            </div>
+
+            <!-- Pie con informacion del pedido controlado en Tempo y boton para facturar 
+            <div class="a-card__paddings">
+                <div class="cta-block">
+                    <div class="cta-block__central">
+                        <div class="cta-block__title">Parece que todo esta ok para facturar</div>
+                        <div class="cta-block__content">Codigos de producto y stock verificados en Tempo</div>
+                    </div>
+                    <div class="cta-block__cta">
+                        <button type="button" class="btn btn-primary btn-medium">
+                            <span>Facturar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

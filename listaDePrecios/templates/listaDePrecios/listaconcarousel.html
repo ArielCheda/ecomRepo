@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @page {
+        size: a4 portrait;
+        @frame header_frame {           /* Static Frame */
+            -pdf-frame-content: header_content;
+            left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+        }
+        @frame content_frame {          /* Content Frame */
+            left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+        }
+        @frame footer_frame {           /* Another static Frame */
+            -pdf-frame-content: footer_content;
+            left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+        }
+    }
+    table { -pdf-keep-with-next: true; }
+    p { margin: 0; -pdf-keep-with-next: true; }
+    p.separator { -pdf-keep-with-next: false; font-size: 6pt; }
+</style>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link href="https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css" rel="stylesheet">
+    
+    <!-- Content for Static Frame 'header_frame' -->
+    <div class="ed-grid s-mb-0 s-gap-0" style="width: 700px;" id="header_content">
+        <div class"logo">
+            <img src="{% static 'encabezado1.jpg' %}">
+        </div>
+    </div>                
+</head>
+
+<body>
+    <!-- Lista de Precios -->
+    <div id="my-categories-34512951"></div>
+    <div>
+        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?34512951&data_platform=code&data_date=2021-01-09" charset="utf-8"></script>
+        <script type="text/javascript"> xCategoriesV2("id=my-categories-34512951"); </script>
+    </div>
+    
+    <div class="ed-grid s-grid-3 s-pxy-1 s-gap-1 rows-gap margin-top-2" style="width: 700px; background-color: #f1eff0;">
+        {% for categoria in categorias %}
+            {% include categoria.formato %}
+        {% endfor %}
+    </div>
+    <script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js"></script>    
+</body>
+<footer>
+    <!-- Content for Static Frame 'footer_frame' -->
+    <div class="ed-grid s-gap-0" style="width:700px;" id="footer_content">
+        <div class="logo">(c) - page <pdf:pagenumber>
+        of <pdf:pagecount>
+
+            <img src="{% static 'pie1.jpg' %}">
+        </div>                
+    </div>
+</footer>
+</html>

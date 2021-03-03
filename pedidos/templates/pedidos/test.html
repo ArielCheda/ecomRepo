@@ -1,0 +1,77 @@
+<!-- StatusCard component -->
+<div class="a-card a-card--compact a-card--success">
+	<div class="a-card__paddings a-card__paddings--default-background">
+		<div class="iconable-block iconable-block--hide-in-mobile">
+			<div class="iconable-block__infographics">
+				<span class="iconable-block__icon">
+                    <div>
+                        <p><span class="card__text-indent">
+                            <strong>#{{ pedido.id }} - {{ pedido.billingPerson.name }} </strong>- {{ pedido.email }}<br>
+                            {{ pedido.billingPerson.street }}, {{ pedido.billingPerson.city }}, {{ pedido.billingPerson.stateOrProvinceName }}, ({{ pedido.billingPerson.postalCode }}), {{ pedido.billingPerson.countryName }}<br>
+                            Telefono: <strong>{{ pedido.billingPerson.phone }}</strong><br>
+                            {{ pedido.shippingOption.shippingMethodName }}<br>
+                            {{ pedido.paymentMethod }}<br></span>
+                        </p>
+                    </div>
+				</span>
+			</div>
+			<div class="iconable-block__content">
+				<div class="status-block status-block--editable">
+					<div class="status-block__central">
+						<div class="status-block__header">
+							<span class="status-block__title">USPS</span>
+							<span class="status-block__edit">Edit</span>
+						</div>
+						<div class="status-block__content">
+							<p>Region: The World</p>
+							<p>6 shipping options</p>
+						</div>
+					</div>
+					<div class="status-block__actions-dropdown">
+						<div class="btn-group dropdown-toggle">
+							<button type="button" class="btn btn-default btn-medium" aria-hidden="true" style="display: none;"></button>
+							<div class="btn btn-default btn-dropdown btn-medium list-dropdown-no-general-text">
+								<span class="btn-dropdown-container"><span class="actions">Actions</span></span><span class="icon-arr-down"></span>
+							</div>
+							<div class="list-dropdown list-dropdown-medium">
+								<ul>
+									<li><a>Rename</a></li>
+									<li><a>Change Shipping Region</a></li>
+									<li><a>Change Account Settings</a></li>
+									<li><a>Sort</a></li>
+									<li><a>Delete</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="status-block__primary-action">
+						<label class="checkbox big">
+							<input name="" type="checkbox" checked="">
+							<div data-on="enabled" data-off="disabled">
+								<div></div>
+							</div>
+							<span class="checkbox__on-text-placeholder">enabled</span>
+							<span class="checkbox__off-text-placeholder">disabled</span>
+						</label>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="a-card__paddings">
+		<div class="cta-block">
+			<div class="cta-block__central">
+				<div class="cta-block__title">Parece que todo esta ok para facturar</div>
+				<div class="cta-block__content">Codigos de producto y stock verificados en Tempo</div>
+			</div>
+			<div class="cta-block__cta">
+				<button type="button" class="btn btn-primary btn-medium">
+					<span>Facturar</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- end of StatusCard component -->

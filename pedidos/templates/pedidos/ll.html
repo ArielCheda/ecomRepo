@@ -1,0 +1,187 @@
+{% extends "pedidos/page.html" %}
+{% block content %}
+<div class="settings-page cf">
+	<div class="settings-page__header">
+		<div class="settings-page__titles settings-page__titles--left">
+			<h1 class="settings-page__title">Facturacion de Pedidos</h1>
+			<!-- <div class="settings-page__subtitle">Short description (optional)</div> -->
+		</div>
+	</div>
+	<div class="settings-page__body" style="padding-bottom: .1px">
+		
+        <!--
+        <div class="named-area">
+			<div class="named-area__header">
+				<div class="named-area__titles"><div class="named-area__title">Vinculacion con Tempo</div></div>
+				<div class="named-area__description">Control de productos en Tempo, carga de pedidos para Facturar.</div>
+			</div>
+			<div class="named-area__body">
+
+            -->
+            {% for pedido in pedidos %}
+				<div class="a-card-stack a-card--tiny">
+					<div class="a-card__paddings">
+                        <div class="a-card"> <!-- Primer Renglon -->
+                            <div class="iconable-block">
+                                <div class="iconable-block__content">
+                                    <div class="status-block">
+                                        <div class="status-block__central">
+                                            <div class="text-big">
+                                                <strong>#{{ pedido.id }}</strong>
+                                            </div>
+                                            <div class="text-default">
+                                                <strong>{{ pedido.billingPerson.name }}</strong> - {{ pedido.email }}
+                                            </div>                                    
+                                        </div>
+                                        <div class="status-block__primary-action">
+                                            <span class="btn btn-primary btn-medium"><strong>${{ pedido.subtotalWithoutTax|stringformat:"1.2f" }}</strong></span>
+                                        </div>
+                                        <div class="status-block__primary-action">
+                                            <button type="button" class="btn btn-primary btn-medium">
+                                                <span>Facturar</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+		    			</div>
+                        <div class="a-card"> <!-- Segundo Renglon -->
+                            <div class="iconable-block">
+                                <div class="flex-table">
+                                    <div class="flex-table__row"> 
+                                        <div class="flex-table__col flex-table__col--align-left">
+                                            <div class="a-card a-card--tiny">
+                                                <div class="a-card"> <!-- Datos de Facturacion -->
+                                                    <strong><u>DATOS DE FACTURACION</u></strong><br>
+                                                    {{ pedido.billingPerson.street }}, {{ pedido.billingPerson.city }}, {{ pedido.billingPerson.stateOrProvinceName }}, ({{ pedido.billingPerson.postalCode }}), {{ pedido.billingPerson.countryName }}<br>
+                                                    Telefono: <strong>{{ pedido.billingPerson.phone }}</strong><br>
+                                                    IVA: {{ pedido.extraFields.posicioniva }} - 
+                                                    {% if pedido.extraFields.indentificador|length_is:"8" %}
+                                                    DNI: <strong>{{ pedido.extraFields.indentificador }}</strong><br>
+                                                    {% else %}
+                                                    CUIT: <strong>{{ pedido.extraFields.indentificador }}</strong><br>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table__col flex-table__col--align-left">
+                                            <div class="a-card"> <!-- Datos de Envio/Retiro -->
+                                                {% if pedido.shippingOption.isPickup %}
+                                                    <strong><u>RETIRO EN TIENDA</u></strong><br>
+                                                    {{ pedido.extraFields.ecwid_order_pickup_time }}
+                                                {% else %}
+                                                    <strong><u>DATOS DE ENVIO</u></strong><br>
+                                                    {{ pedido.shippingPerson.street }}, {{ pedido.shippingPerson.city }}, {{ pedido.shippingPerson.stateOrProvinceName }}, ({{ pedido.shippingPerson.postalCode }}), {{ pedido.shippingPerson.countryName }}<br>
+                                                    Telefono: <strong>{{ pedido.billingPerson.phone }}</strong><br>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-table__row"> 
+                                        <div class="flex-table__col flex-table__col--align-left">
+                                            <div class="a-card a-card--tiny ">
+                                                <div class="a-card">
+                                                    {{ pedido.paymentMethod }}<br>
+                                                    {{ pedido.paymentStatus }}<br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if pedido.shippingOption.isPickup == False %}
+                                            <div class="flex-table__col flex-table__col--align-left">
+                                                <div class="a-card a-card--tiny ">
+                                                    {{ pedido.shippingOption.shippingMethodName }}<br>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-card">
+                            <div class="collapsible"> 
+                                <div class="collapsible__header btn btn-primary btn-medium">{{ pedido.items |length }} Items</div>
+                                <div class="collapsible__body"> 
+                                    <div class="iconable-block">
+                                        <div class="iconable-block__content">
+                                            <div class="status-block">
+                                                <div class="status-block__central">
+                                                    {% for itemPedido in pedido.items %}
+                                                        <!--<div class="iconable-block__content">-->
+                                                            <div class="status-block">
+                                                                <div class="status-block__info" style="width:180; ">
+                                                                    <img class="gwt-Image" src="{{ itemPedido.smallThumbnailUrl }}">
+                                                                </div>
+                                                                <div class="status-block__central">
+                                                                    <span class="" style="vertical-align: top; ">
+                                                                        {{ itemPedido.name }}<br>
+                                                                        <strong>{{ itemPedido.sku }}<br>
+                                                                        {% for opcionSeleccionada in itemPedido.selectedOptions %}
+                                                                            <strong>{{ opcionSeleccionada.name }}:</strong> {{ opcionSeleccionada.value }}<br>
+                                                                        {% endfor %}
+                                                                    </span>
+                                                                </div>
+                                                                <div class="status-block__primary-action" style="width: 300px; align: right; ">
+                                                                    <div class="bubble">
+                                                                        <div class="bubble-error bubble-right">
+                                                                            <div class="bbl-title">TEMPO</div>
+                                                                            <div class="bbl-text">Stock Insuficiente <br>Codigo no existe</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="status-block__primary-action" style="width: 300px; padding-right: 0px; align: right; ">
+                                                                    <h2>{{ itemPedido.quantity }}x ${{ itemPedido.priceWithoutTax|stringformat:"1.2f" }}</h2></strong><br>
+                                                                </div>
+                                                            </div>
+                                                        <!--</div>-->
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+            {% endfor %}
+        <!--
+            </div>
+        </div>-->
+    </div>
+</div>
+{% endblock content %}
+
+                                    <!--
+                                    {% for itemPedido in pedido.items %}
+                                        <div class="iconable-block iconable-block--hide-in-mobile">
+                                            <div class="iconable-block__infographics">
+                                                <span class="iconable-block__icon">
+                                                    <a class="order-product__thumbnail">
+                                                        <div class="gwt-Label product-placeholder colored-background-3" style="display: none; " aria-hidden="true"></div>
+                                                        <img class="gwt-Image" src="{{ itemPedido.smallThumbnailUrl }}">
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="status-block__content" style="min-width: 180px; " >
+                                                <span class="inline-text-tag">
+                                                    {{ itemPedido.name }}<br>
+                                                    <strong>{{ itemPedido.sku }}<br>
+                                                    <h2>{{ itemPedido.quantity }}x ${{ itemPedido.priceWithoutTax|stringformat:"1.2f" }}</h2></strong><br>
+                                                </span>
+                                            </div>
+                                            <div class="status-block__2">
+                                                <div class="bubble">
+                                                    <div class="bubble-info bubble-top">
+                                                        <div class="bbl-title"><strong>{{ itemPedido.name }}</strong></div>
+                                                        <div class="bbl-text">
+                                                            {% for opcionSeleccionada in itemPedido.selectedOptions %}
+                                                            <strong>{{ opcionSeleccionada.name }}:</strong> {{ opcionSeleccionada.value }}<br>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=""><br></div>
+                                    {% endfor %}
+                                    -->

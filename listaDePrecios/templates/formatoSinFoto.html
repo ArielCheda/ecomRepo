@@ -1,0 +1,10 @@
+<div class="s-block rows-gap s-cols-2 ed-grid s-grid-6" style="max-height:25;">
+
+    {% for producto in categoria.productos %}
+        {% if producto.enabled %}
+            <div class="s-left s-mb-2 s-cols-4 s-x-1" style="font-family: montserrat; font-size: 14px; font-color: #9a9b9f;">{{ producto.name }}</div>
+            <div class="s-to-right s-center s-x-5" style="font-family: montserrat; font-color: #9a9b9f;font-size: 14px;">{{ producto.sku }}</div>
+            <a class="button s-to-right s-left s-x-6" style="height: 30px; background-color: #939cab; font-family: montserrat ; font-size:12px; font-weight: bold;" href="{{ producto.url }}">{{ producto.defaultDisplayedPriceFormatted }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

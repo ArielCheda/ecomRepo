@@ -1,0 +1,45 @@
+<div class="s-cols-2"> 
+  <div class="carousel js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+  
+
+    {% for producto in categoria.productos %}
+      {% if producto.enabled %}
+
+
+        <div class="carousel-cell">
+
+          <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-225439506" itemscope itemtype="http://schema.org/Product" data-single-product-id="{{ producto.id }}">
+            <div itemprop="image"></div>
+            <div itemprop="name" content="{{ producto.name }}"></div>
+            <div itemtype="http://schema.org/Offer" itemscope itemprop="offers">
+              <div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="{{ producto.price }}" data-spw-price-location="button">
+                <div itemprop="priceCurrency" content="ARS"></div>
+              </div>
+            </div>
+            <div class="ed-grid s-grid-3">
+              <div customprop="options"></div>
+            </div>
+            <div customprop="qty"></div>
+            <div customprop="addtobag"></div>
+          </div>
+          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?34512951&data_platform=singleproduct_v2" charset="utf-8"></script>
+          <script type="text/javascript">xProduct()</script>
+
+
+        </div>
+
+      {% endif %}
+    {% endfor %}
+
+
+  </div>
+</div>
+
+
+
+<div class="ecsp ecsp-SingleProduct-v2 ecsp-Product ec-Product-230209329" itemtype="http://schema.org/Product" data-single-product-id="230209329">
+  <div class="ecsp-title" itemprop="name" style="display:none;" content="Pata regulable 10 a 13cm. con clip para perfil Zocalo de aluminio"></div>
+  <div customprop="addtobag"></div>
+</div>
+<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?34512951&data_platform=singleproduct_v2" charset="utf-8"></script>
+<script type="text/javascript">xProduct()</script>

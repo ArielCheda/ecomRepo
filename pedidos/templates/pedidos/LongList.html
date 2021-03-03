@@ -1,0 +1,195 @@
+{% extends "pedidos/esqueletoEcwid.html" %}
+{% block content %}
+<div class="ecwid-orders-list"></div>
+	<div class="long-list"></div>
+		{% for pedido in pedidos %}  
+			<div id="order_id_{{pedido.id}}" class="long-list__item list-item"></div>
+			<div class="list-item__toggle"></div>
+			<div>
+				<span class="">
+					<input id="gwt-uid-34641" class="list-item__toggle-checkbox" type="checkbox" value="on" tabindex="0">
+					<label class="list-item__toggle-label" for="gwt-uid-34641"></label>
+				</span>
+			</div>
+			<div class="list-item__content">
+				<div class="list-item__info">
+					<div class="order">
+						<div class="order__info-wrapper">   
+							<div class="order__number order__number--long">   
+								<span class="order-header__number-sign">#</span>
+								<span class="card_inline_title">{{ pedido.vendorOrderNumber }}</span>
+								<div class="card_inline_title">{{ pedido.createDate|date:"D, F d, Y g:i A" }}</div>
+							</div>
+							<div class="order__info">   
+								<div class="order__error-label" style="display: none;" aria-hidden="true">
+								El pedido no se ha pagado en su totalidad. Ve este pedido para más detalles.
+								</div>
+								<span class="order__date-wrapper">
+									<span class="order__number">{{ pedido.vendorOrderNumber }}{{ pedido.createDate|date:"D, F d, Y g:i A" }}</span>
+								</span>
+								<div class="order__mobile-statuses">
+									<span class="order__status order-status order-status--awaiting-payment">En espera de Pago</span>
+									<span class="order__status order-status order-status--awaiting-processing">Esperando procesamiento</span>
+								</div>
+								<div class="btn-group dropdown-toggle order-status-dropdown">
+									<button class="btn btn-default btn-medium" type="button" style-"display: none;" aria=hidden="true"></button> 
+									<div class="btn btn-default btn-dropdown list-dropdown-no-general-text order-status--awaiting-payment">
+										::before
+										<a class="iconable-link">
+											<span class="iconable-link__text">
+												<span class="">En espera de pago</span>
+											</span>
+											<span class="iconable-link__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28" focusable="false">
+													<path d="M3.3 9.5l5.6 5.1 6-5.1c.8-.7 1.9-.7 2.6 0 .8.7.8 1.8 0 2.5l-7.2 6.4c-.5.4-1 .6-1.4.6s-1-.2-1.3-.5L.7 12.1c-.8-.7-.8-1.8 0-2.5.6-.8 1.9-.8 2.6-.1z"></path>
+												</svg>
+											</span>
+										</a>
+									</div>
+									<div class="list-dropdown list-dropdown-medium list-dropdown--left">
+										<div class="list-dropdown__content">
+											<ul>
+												<li>
+													<a class="">Pagado</a>
+												</li> 
+												<li>
+													<a class="">En espera de pago</a>
+												</li> 
+												 <li>
+													<a class="">Cancelado</a>
+												 </li> 
+												 <li>
+													<a class="">Reembolsado</a>
+												 </li> 
+												 <li>
+													<a class="">Reembolsado parcialmente</a>
+												 </li>
+											</ul>
+									    </div>
+									</div>
+								</div>    
+								<div class="btn-group dropdown-toggle order-status-dropdown">
+									<button class="btn btn-default btn-medium" type="button" style-"display: none;" aria=hidden="true"></button>  
+									<div class="btn btn-default btn-dropdown list-dropdown-no-general-text order-status--awaiting-processing">
+										::before
+										<a class="iconable-link">
+											<span class="iconable-link__text">
+												<span class="">Esperando procesamiento</span>
+											</span>
+											<span class="iconable-link__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28" focusable="false">
+													<path d="M3.3 9.5l5.6 5.1 6-5.1c.8-.7 1.9-.7 2.6 0 .8.7.8 1.8 0 2.5l-7.2 6.4c-.5.4-1 .6-1.4.6s-1-.2-1.3-.5L.7 12.1c-.8-.7-.8-1.8 0-2.5.6-.8 1.9-.8 2.6-.1z"></path>
+												</svg>
+											</span>
+										</a>
+									</div>
+									<div class="list-dropdown list-dropdown-medium list-dropdown--left">
+										<div class="list-dropdown__content">
+											<ul>
+												<li>
+													<a class="">Esperando procesamiento</a>
+												</li> 
+												<li>
+													<a class="">En proceso</a>
+												</li> 
+												<li>
+													<a class="">Listo para recoger</a>
+												</li> 
+												<li>
+													<a class="">Enviado</a>
+												</li> 
+												<li>
+													<a class="">Listo para entrega</a>
+												</li>
+												<li>
+													<a class="">Entregado</a>
+												</li>
+												<li>
+													<a class="">No se entregara</a>
+												</li>
+												<li>
+													<a class="">Devuelto</a>
+												</li>
+											</ul>
+										</div>
+									</div>   
+								</div>
+							</div>
+							<div class="order-owner">
+								<span class="order-owner__name">{{pedido.billingPerson.name}}</span> 
+								<a class="order-owner__email" target="_blank" href="mailto:{{ pedido.email }}">{{ pedido.email }}<a/>
+								<span class="order-owner__address">{{ pedido.billingPerson.street}}, {{ pedido.billingPerson.city }}, {{ pedido.billingPerson.stateOrProvinceName }}, ({{ pedido.billingPerson.postalCode }}), {{ pedido.billingPerson.countryName }} Telefono: {{ pedido.billingPerson.phone }}</span>
+								<div class="order-owner__info-item" style="display: none;" aria-hidden="true">
+									<span class="svg-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 80 80" focusable="false" 
+											<path fill="#000000" d="M22.47 41.36c0-3.03.75-5.62 2.24-7.78 1.49-2.15 3.54-3.78 6.13-4.88 2.37-1.01 5.29-1.74 8.77-2.17 1.19-.13 3.12-.31 5.8-.53v-1.12c0-2.81-.31-4.7-.92-5.67-.92-1.32-2.37-1.98-4.35-1.98h-.53c-1.45.13-2.7.59-3.76 1.38-1.05.79-1.74 1.89-2.04 3.3-.18.88-.62 1.38-1.32 1.52l-7.58-.92c-.75-.18-1.12-.57-1.12-1.19 0-.13.02-.29.07-.46.75-3.91 2.58-6.81 5.5-8.7C32.28 10.27 35.7 9.22 39.61 9h1.65c5.01 0 8.92 1.3 11.73 3.89.44.44.85.92 1.22 1.42.37.51.67.96.89 1.35.22.4.42.97.59 1.71.18.75.31 1.26.4 1.55.09.29.15.9.2 1.85.04.94.07 1.5.07 1.68V38.4c0 1.14.16 2.19.49 3.13.33.94.65 1.63.96 2.04.31.42.81 1.09 1.52 2.01.26.4.4.75.4 1.05 0 .35-.18.66-.53.92-3.65 3.16-5.62 4.88-5.93 5.14-.53.4-1.16.44-1.91.13-.62-.53-1.15-1.03-1.61-1.52-.46-.48-.79-.83-.99-1.05s-.52-.65-.96-1.29c-.44-.64-.75-1.07-.92-1.29-2.46 2.68-4.88 4.35-7.25 5.01-1.49.44-3.34.66-5.54.66-3.38 0-6.16-1.04-8.34-3.13s-3.28-5.03-3.28-8.85zm11.34-1.32c0 1.71.43 3.09 1.29 4.12.86 1.03 2.01 1.55 3.46 1.55.13 0 .32-.02.56-.07.24-.04.41-.07.49-.07 1.85-.48 3.27-1.67 4.28-3.56.48-.83.85-1.75 1.09-2.74.24-.99.37-1.79.4-2.41.02-.62.03-1.63.03-3.03V32.2c-2.55 0-4.48.18-5.8.53-3.87 1.1-5.8 3.53-5.8 7.31z"></path>
+											<path fill="#FE971F" d="M3.85 58.15c.22-.35.57-.37 1.05-.07 10.98 6.37 22.94 9.56 35.85 9.56 8.61 0 17.11-1.6 25.51-4.81.22-.09.54-.22.96-.4.42-.18.71-.31.89-.4.66-.26 1.18-.13 1.55.4.37.53.25 1.01-.36 1.45-.79.57-1.8 1.23-3.03 1.98-3.78 2.24-8 3.98-12.65 5.21-4.66 1.23-9.21 1.85-13.64 1.85-6.85 0-13.34-1.2-19.44-3.59-6.12-2.41-11.59-5.78-16.43-10.13-.26-.22-.4-.44-.4-.66.01-.13.05-.26.14-.39z"></path>
+											<path fill="#FE971F" d="M62.71 59.27c.09-.18.22-.35.4-.53 1.1-.75 2.15-1.25 3.16-1.52 1.67-.44 3.3-.68 4.88-.73.44-.04.86-.02 1.25.07 1.98.18 3.16.51 3.56.99.18.26.26.66.26 1.19v.46c0 1.54-.42 3.35-1.25 5.44-.83 2.09-2 3.77-3.49 5.04-.22.18-.42.26-.59.26-.09 0-.18-.02-.26-.07-.26-.13-.33-.37-.2-.72 1.63-3.82 2.44-6.48 2.44-7.98 0-.48-.09-.83-.26-1.05-.44-.53-1.67-.79-3.69-.79-.75 0-1.63.04-2.64.13-1.1.13-2.11.26-3.03.4-.26 0-.44-.04-.53-.13-.09-.09-.11-.18-.07-.26-.01-.05.01-.12.06-.2z"></path>
+										</svg>
+									</span>
+								</div>
+								<div class="order__shipping" style="">
+									<span class="svg-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" focusable="false">
+											<path d="M15.95,13.9978521 C15.7134038,15.1628056 14.6889408,16 13.5,16 C12.3110592,16 11.2865962,15.1628056 11.05,13.9978521 L6.95,13.9978521 C6.71340377,15.1628056 5.68894081,16 4.5,16 C3.31105919,16 2.28659623,15.1628056 2.05,13.9978521 L1.007,13.9978521 C0.740987221,13.9989149 0.485447592,13.8942789 0.296597999,13.7069631 C0.107748405,13.5196473 0.00105875315,13.2649961 0,12.999031 L0,2.99982101 C0,2.44691999 0.45,2 1.007,2 L9.993,2 C10.55,2 11,2.44691999 11,2.99882119 L11,3.99964202 L14,3.99964202 L18,8.05191659 L18,13.9978521 L15.95,13.9978521 Z M11,8.99874708 L11,12.9980311 L11.05,12.9980311 C11.2865962,11.8330777 12.3110592,10.9958833 13.5,10.9958833 C14.6889408,10.9958833 15.7134038,11.8330777 15.95,12.9980311 L17,12.9980311 L17,8.99874708 L11,8.99874708 Z M13.516,4.99946304 L11,4.99946304 L11,7.99892607 L16.682,7.99892607 L13.516,4.99946304 Z M9.993,12.9980311 C10,12.9980311 10,2.99882119 10,2.99882119 C10,2.99982101 1.007,2.99982101 1.007,2.99982101 C1,2.99982101 1,12.999031 1,12.999031 L2.05,12.9980311 C2.28659623,11.8330777 3.31105919,10.9958833 4.5,10.9958833 C5.68894081,10.9958833 6.71340377,11.8330777 6.95,12.9980311 L9.993,12.9980311 Z M4.5,14.9976732 C5.32842712,14.9976732 6,14.3262205 6,13.4979416 C6,12.6696628 5.32842712,11.9982101 4.5,11.9982101 C3.67157288,11.9982101 3,12.6696628 3,13.4979416 C3,14.3262205 3.67157288,14.9976732 4.5,14.9976732 Z M13.5,14.9976732 C14.3284271,14.9976732 15,14.3262205 15,13.4979416 C15,12.6696628 14.3284271,11.9982101 13.5,11.9982101 C12.6715729,11.9982101 12,12.6696628 12,13.4979416 C12,14.3262205 12.6715729,14.9976732 13.5,14.9976732 Z"></path>
+										</svg>
+									</span>
+									<span class="order__shipping-text">{{ pedido.shippingOption.shippingMethodName }}</span>
+								</div>
+								<div class="order__payment" style="">
+									<span class="svg-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18 " focusable="false">
+											<path d="M14.165,6 L15,6 C16.105,6 17,6.887 17,8 L17,14 C17,15.105 16.11,16 15,16 L3,16 C1.895,16 1,15.113 1,14 L1,8 C1,6.895 1.89,6 3,6 L3.165,6 L4.005,5.775 L9.317,0.463 L11.384,3.53 L13.36,3 L14.164,6 L14.165,6 Z M7.028,6 L13.129,6 L12.654,4.225 L7.028,6 Z M5.937,5.257 L10.268,3.829 L9.317,1.877 L5.937,5.257 Z M2,8 L2,14 C2,14.557 2.444,15 3,15 L15,15 C15.555,15 16,14.555 16,14 L16,8 C16,7.443 15.556,7 15,7 L3,7 C2.445,7 2,7.445 2,8 Z M13,13 C11.8954305,13 11,12.1045695 11,11 C11,9.8954305 11.8954305,9 13,9 C14.1045695,9 15,9.8954305 15,11 C15,12.1045695 14.1045695,13 13,13 Z M13,12 C13.5522847,12 14,11.5522847 14,11 C14,10.4477153 13.5522847,10 13,10 C12.4477153,10 12,10.4477153 12,11 C12,11.5522847 12.4477153,12 13,12 Z"></path>
+										</svg>
+									</span>
+									<span class="order__payment-text">{{ pedido.paymentMethod }}</span>
+								</div>
+							</div>
+							<div class="list-item__details list-item-details animation-disabled">
+								<a class="list-item-details__toggle"> 
+									{{ pedido.items|length }} productos
+									::after
+								</a>
+								<div class="order-products-list">
+									{% for itemPedido in pedido.items %}
+										<div class="order-products-list__item order-product"> 
+											<a class="order-product__thumbnail">
+												<div class="gwt-Label product-placeholder colored-background-3" style="display: none;" aria-hidden="true"></div>
+												<img class="gwt-Image" src="{{ itemPedido.smallThumbnailUrl }}">
+													::after
+											</a>    
+											<div class="order-product__description">
+												<div class="spacing--mb-quarter">
+													<span class="order-product__name">
+														{{ itemPedido.name }} 
+													</span>
+													<span class="order-product__sku muted">{{ itemPedido.sku }}</span>
+												</div>
+												<div class="order-product__info-wrapper">
+													<div class="order-product__options">
+														{% for opcionSeleccionada in itemPedido.selectedOptions %}
+															<div class="product-attribute product-attribute--compact">
+																<span class="product-attribute__name">{{ opcionSeleccionada.name }}:</span>
+																<span class="product-attribute__value">{{ opcionSeleccionada.value }}</span>
+															</div>
+														{% endfor %}
+													</div>
+												</div>
+												<div class="order-product__total">
+													<span class="order-product__qty">{{ itemPedido.quantity }}</span>
+													<span>x</span>
+													<span class="order-product__price">{{ itemPedido.priceWithoutTax }}</span>
+												</div>
+											</div>
+										</div>	
+									{% endfor %}
+								</div>
+							</div>        
+						</div>
+					</div>
+				</div>
+			</div>	
+		{% endfor %}
+	</div>
+</div>
+{% endblock content %}
