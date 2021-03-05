@@ -25,10 +25,9 @@ with open(os.path.join(BASE_DIR, 'DjangoSecretKey.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["ec2-18-221-241-195.us-east-2.compute.amazonaws.com"]
-#ALLOWED_HOSTS = ["3.19.23.220", "gestion.hsj.com.ar","http://gestion.hsj.com.ar"]
+#ALLOWED_HOSTS = ["3.19.23.220","mercadoherrajes.com.ar","www.mercadoherrajes.com.ar"]
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
