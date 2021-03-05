@@ -18,7 +18,7 @@ def leer_ecwid(Url, Params):
 def entregasPendientes(request):
     storeId='34512951'
     with open(os.path.join(BASE_DIR, 'EcwidToken.txt')) as f:
-    token = f.read().strip()
+        token = f.read().strip()
     
     url='https://app.ecwid.com/api/v3/34512951/orders'
     offset=0
