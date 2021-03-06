@@ -25,9 +25,9 @@ with open(os.path.join(BASE_DIR, 'DjangoSecretKey.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1","mercadoherrajes.com.ar.localhost","localhost","mercadoherrajes.com.ar","www.mercadoherrajes.com.ar"]
+ALLOWED_HOSTS = ["3.141.48.85","mercadoherrajes.com.ar","www.mercadoherrajes.com.ar"]
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
