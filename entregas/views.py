@@ -2,6 +2,8 @@ from django.shortcuts import render
 import requests
 import pandas as pd
 import os
+from django.conf import settings
+
 
 # Create your views here.
 
@@ -9,15 +11,15 @@ def leer_ecwid(Url, Params):
     try:
         r=requests.get(url=Url, params=Params)
         js=r.json()
-        retorno = pd.DataFrame(js)
+        return pd.DataFrame(js)
     except:
         print('No se pudo leer EC Server')
-        retorno = None
-    return retorno
+        return None
+    
 
 def entregasPendientes(request):
     storeId='34512951'
-    with open(os.path.join(BASE_DIR, 'EcwidToken.txt')) as f:
+    with open(os.path.join(settings.BASE_DIR, 'EcwidToken.txt')) as f:
         token = f.read().strip()
     
     url='https://app.ecwid.com/api/v3/34512951/orders'
