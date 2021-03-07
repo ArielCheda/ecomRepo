@@ -5,73 +5,69 @@
 
     <link rel="stylesheet" href="{% static 'css/amazon1.css' %}">
     <style type="text/css">
-      .nav-sprite-v1 .nav-sprite, .nav-sprite-v1 .nav-icon {
+    .nav-sprite-v1 .nav-sprite, .nav-sprite-v1 .nav-icon {
         background-image: url({% static '/images/nav-sprite-global.png' %});
         background-position: -100 1000px;
         background-repeat: repeat-x;
-      }
-      .nav-spinner {
+    }
+    .nav-spinner {
         background-image: url({% static '/images/snake.gif' %});
         background-position: center center;
         background-repeat: no-repeat;
-      }
-      .nav-timeline-icon, .nav-access-image, .nav-timeline-prime-icon {
+    }
+    .nav-timeline-icon, .nav-access-image, .nav-timeline-prime-icon {
         background-image: url({% static '/images/timeline_sprite_1x.png' %});
         background-repeat: no-repeat;
-      }
+    }
     </style>
     <link rel="stylesheet" href="{% static '/css/amazon3.css' %}" />
     <link rel="stylesheet" href="{% static '/css/amazon4.css' %}" />
     <style>.gw-card-layout .a-cardui{background:#fff;height:100%;position:relative;margin-bottom:0;margin-top:0;overflow:hidden;padding-top:20px}.gw-card-layout .a-cardui .a-cardui-header{padding:0 20px;margin-bottom:10px}.gw-card-layout .a-cardui .a-cardui-footer{padding:0 20px;margin-bottom:20px;position:absolute;bottom:0;width:100%}.gw-card-layout .a-cardui .a-cardui-body{padding:0 20px 56px 20px;margin-bottom:0}.gw-card-layout .a-cardui .a-cardui-body:last-child{padding-bottom:20px}.gw-card-layout .a-cardui:last-child{margin-bottom:0}.a-lt-ie9 .gw-card-layout .a-cardui .a-cardui-body{padding-bottom:20px}.gw-card-layout{font-size:13px!important;line-height:19px!important}.gw-card-layout .a-size-base{font-size:13px!important;line-height:19px!important}.gw-card-layout .a-size-small{font-size:12px!important;line-height:18px!important}.gw-card-layout .a-size-base-plus{font-size:15px!important;line-height:21px!important}.gw-card-layout .a-size-medium{font-size:17px!important;line-height:21.34px!important}.gw-card-layout .a-size-large{font-size:21px!important;line-height:27.3px!important}.gw-card-layout h2{font-size:21px!important;line-height:27.3px!important}.truncate-1line,.truncate-2line{display:block;overflow:hidden;text-overflow:ellipsis;-ms-text-overflow:ellipsis}.truncate-1line{white-space:nowrap}.truncate-2line{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;max-height:38px}.truncate-2line.a-size-base{max-height:38px}.truncate-2line.a-size-small{max-height:36px}.truncate-2line.a-size-base-plus{max-height:42px}.truncate-2line.a-size-medium{max-height:42.67px}.truncate-2line.a-size-large{max-height:54.6px}h2.truncate-2line{max-height:54.6px}.gw-card-layout .a-cardui.gw-media-card{padding-top:0;color:#fff}.gw-card-layout .a-cardui.gw-media-card .a-cardui-footer,.gw-card-layout .a-cardui.gw-media-card .a-cardui-header{position:absolute;left:0;z-index:1;width:100%}.gw-card-layout .a-cardui.gw-media-card .a-cardui-header{margin-top:20px;padding:0 20px;top:0}.gw-card-layout .a-cardui.gw-media-card .a-cardui-header h3{margin-right:340px}.gw-card-layout .a-cardui.gw-media-card .a-cardui-footer{margin-bottom:20px;padding:0 20px;bottom:0}.gw-card-layout .a-cardui.gw-media-card .a-cardui-footer .a-link-normal{color:#fff}.gw-card-layout .a-cardui.gw-media-card .a-cardui-body{padding:0;width:100%;height:100%;overflow:hidden;position:relative}.gw-card-layout .a-cardui.gw-media-card .asinImage{position:absolute;top:0;bottom:0;right:20px;margin:auto}.gw-card-layout .a-cardui.gw-media-card .asinImage img{box-shadow:0 2px 6px 0 rgba(0,0,0,.5)}.gw-card-layout .a-cardui.gw-media-card .asinBackground{width:100%;height:100%;overflow:hidden;background-repeat:no-repeat;background-position:center right;background-size:cover;filter:blur(10px);-webkit-filter:blur(10px);filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10px');-ms-filter:"progid:DXImageTransform.Microsoft.Blur(PixelRadius='10px')";transform:scale(1.1);-webkit-transform:scale(1.1)}.gw-card-layout .a-cardui.gw-media-card .backgroundGradient{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to right,#111,rgba(17,17,17,.2));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#111111, endColorstr=#17171733, GradientType=1);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#111111, endColorstr=#17171733, GradientType=1)"}.gw-card-layout[data-flow-dir="h"]{display:-webkit-flex;display:flex;-webkit-flex-flow:row wrap;flex-flow:row wrap}.gw-card-layout[data-flow-dir="h"]>.gw-col{height:420px;min-height:420px;-webkit-flex:1 0 290px;flex:1 0 290px;padding-left:10px;padding-right:10px;min-width:290px}.gw-card-layout[data-flow-dir="h"] .card-flow-row-break{-webkit-flex:1 0 100%;flex:1 0 100%}.gw-card-layout[data-flow-dir="h"]>.gw-col[data-col-span-ws="2"]{-webkit-flex:2 0 580px;flex:2 0 580px}.gw-card-layout[data-flow-dir="h"]>.gw-col[data-col-span-ws="4"]{-webkit-flex:1 0 100%;flex:1 0 100%}.gw-card-layout[data-flow-dir="h"] .gw-card-layout[data-flow-dir="v"]{display:-webkit-flex;display:flex;-webkit-flex-flow:column nowrap;flex-flow:column nowrap;margin-top:-10px;margin-bottom:-10px}.gw-card-layout[data-flow-dir="v"]>.gw-row{-webkit-flex:1 0 0;flex:1 0 0;margin-top:10px;margin-bottom:10px}.gw-card-layout [data-order-ws="1"]{-webkit-order:1;order:1}.gw-card-layout [data-order-ws="2"]{-webkit-order:2;order:2}.gw-card-layout [data-order-ws="3"]{-webkit-order:3;order:3}.gw-card-layout [data-order-ws="4"]{-webkit-order:4;order:4}.gw-card-layout [data-order-ws="5"]{-webkit-order:5;order:5}.gw-card-layout [data-order-ws="6"]{-webkit-order:6;order:6}.gw-card-layout [data-order-ws="7"]{-webkit-order:7;order:7}.gw-card-layout [data-order-ws="8"]{-webkit-order:8;order:8}.gw-card-layout [data-order-ws="9"]{-webkit-order:9;order:9}.gw-card-layout [data-order-ws="10"]{-webkit-order:10;order:10}.gw-card-layout [data-order-ws="11"]{-webkit-order:11;order:11}.gw-card-layout [data-order-ws="12"]{-webkit-order:12;order:12}.gw-card-layout [data-order-ws="13"]{-webkit-order:13;order:13}.gw-card-layout .gw-col.gw-fixed-col{min-width:320px}@media (min-width:1240px){.gw-card-layout>hr:last-of-type{display:none}}@media (max-width:1239px){.gw-card-layout[data-flow-dir="h"]>.gw-col{-webkit-flex-basis:33.33333%;flex-basis:33.33333%;min-width:33.33333%}.gw-card-layout[data-flow-dir="h"]>.gw-col[data-col-span-sm="2"]{-webkit-flex:2 0 66.66667%;flex:2 0 66.66667%}.gw-card-layout[data-flow-dir="h"]>.gw-col[data-col-span-sm="3"]{-webkit-flex:1 0 100%;flex:1 0 100%}.gw-card-layout [data-order-sm="1"]{-webkit-order:1;order:1}.gw-card-layout [data-order-sm="2"]{-webkit-order:2;order:2}.gw-card-layout [data-order-sm="3"]{-webkit-order:3;order:3}.gw-card-layout [data-order-sm="4"]{-webkit-order:4;order:4}.gw-card-layout [data-order-sm="5"]{-webkit-order:5;order:5}.gw-card-layout [data-order-sm="6"]{-webkit-order:6;order:6}.gw-card-layout [data-order-sm="7"]{-webkit-order:7;order:7}.gw-card-layout [data-order-sm="8"]{-webkit-order:8;order:8}.gw-card-layout [data-order-sm="9"]{-webkit-order:9;order:9}.gw-card-layout [data-order-sm="10"]{-webkit-order:10;order:10}.gw-card-layout [data-order-sm="11"]{-webkit-order:11;order:11}.gw-card-layout [data-order-sm="12"]{-webkit-order:12;order:12}.gw-card-layout [data-order-sm="13"]{-webkit-order:13;order:13}.gw-card-layout .gw-col.gw-fixed-col{min-width:none}}.gw-card-layout[data-flow-dir="h"]>.card-flow-row-break{height:20px;margin:0;border:none}.gw-card-layout[data-flow-dir="h"]>[data-display-at]{display:none}.gw-card-layout[data-flow-dir="h"]>[data-display-at*=ws]{display:block}.gw-card-layout[data-flow-dir="h"][data-grid-breakpoint=ws]>[data-hide-at-ws]{display:none!important}.gw-card-layout[data-flow-dir="h"] .gw-auto-height{height:auto!important;min-height:0!important}@media (max-width:1239px){.gw-card-layout[data-flow-dir="h"]{min-width:919px}.gw-card-layout[data-flow-dir="h"]>[data-display-at]{display:none}.gw-card-layout[data-flow-dir="h"]>[data-display-at*=sm]{display:block}.gw-card-layout[data-flow-dir="h"][data-grid-breakpoint=sm]>[data-hide-at-sm]{display:none!important}}</style>
     <title>MercadoHerrajes, donde compras de todo para tus muebles</title>
 
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href="https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>       
 </head>
 
 <body>
-    
-
-
     <header id="navbar-main" class = "nav-opt-sprite nav-flex nav-locale-us nav-lang-es nav-ssl nav-unrec nav-progressive-attribute">
         <div id='navbar' cel_widget_id='Navigation-desktop-navbar' data-template="layoutSwapToolBar" role='navigation' class="nav-sprite-v1 celwidget nav-bluebeacon nav-a11y-t1 bold-focus-hover layout2 nav-flex nav-packard-glow hamburger layout3 layout3-alt nav-progressive-attribute">
-          <div id='nav-belt'>
-
-
+        <div id='nav-belt'>
             <div class='nav-left'>
-              <div id="nav-logo" >
-                <a href="/-/es/ref=nav_logo" id="nav-logo-sprites" class="nav-logo-link nav-progressive-attribute" aria-label="mercadoherrajes.com.ar">
-                  <span class="nav-sprite nav-logo-base"></span>
-                  <span id="logo-ext" class="nav-sprite nav-logo-ext nav-progressive-content"></span>
-                  <span class="nav-logo-locale">.us</span>
-                </a>
-              </div>
-
-              <!--
-              <div id="nav-global-location-slot">
-                <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Elige tu ubicación&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;Gateway&amp;storeContext&#x3D;NoStoreName&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Listo&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Elige tu ubicación&quot;}' data-action="a-modal">
-                  <a id="nav-global-location-popover-link" class="nav-a nav-a-2 a-popover-trigger a-declarative nav-progressive-attribute" tabindex="0">
-                    <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
-                    <div id="glow-ingress-block">
-                      <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
-                        Enviar a
-                      </span>
-                      <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
-                        Caseros
-                      </span>
-                    </div>
-                  </a>
-                </span>
-                <input data-addnewaddress="add-new" id="unifiedLocation1ClickAddress" name="dropdown-selection" type="hidden" value="add-new" class="nav-progressive-attribute" />
-                <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute"/>
-                <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="" class="nav-progressive-attribute"/>
-              </div>
-              -->
-              
+                <!-- anulo el logo
+                <div id="nav-logo" >
+                    <a href="/-/es/ref=nav_logo" id="nav-logo-sprites" class="nav-logo-link nav-progressive-attribute" aria-label="mercadoherrajes.com.ar">
+                    <span class="nav-sprite nav-logo-base"></span>
+                    <span id="logo-ext" class="nav-sprite nav-logo-ext nav-progressive-content"></span>
+                    <span class="nav-logo-locale">.us</span>
+                    </a>
+                </div>
+                -->
+                <!--
+                <div id="nav-global-location-slot">
+                    <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Elige tu ubicación&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;Gateway&amp;storeContext&#x3D;NoStoreName&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Listo&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Elige tu ubicación&quot;}' data-action="a-modal">
+                    <a id="nav-global-location-popover-link" class="nav-a nav-a-2 a-popover-trigger a-declarative nav-progressive-attribute" tabindex="0">
+                        <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
+                        <div id="glow-ingress-block">
+                        <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
+                            Enviar a
+                        </span>
+                        <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
+                            Caseros
+                        </span>
+                        </div>
+                    </a>
+                    </span>
+                    <input data-addnewaddress="add-new" id="unifiedLocation1ClickAddress" name="dropdown-selection" type="hidden" value="add-new" class="nav-progressive-attribute" />
+                    <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute"/>
+                    <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="" class="nav-progressive-attribute"/>
+                </div>
+                -->
+                
                 <div id='nav-tools' class="layoutToolbarPadding">  
                     <a href="https://hsj.com.ar/signIn/" class="nav-a nav-a-2   nav-progressive-attribute" data-nav-ref="nav_ya_signin"  data-nav-role="signin" data-ux-jq-mouseenter="true" id="nav-link-accountList" tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav-link-accountList" data-csa-c-content-id="nav_ya_signin">
                         <div class="nav-line-1-container">
@@ -97,256 +93,236 @@
 
 
 
-              <div id="nav-global-location-toaster-script-container" class="nav-progressive-content"> 
-              <!-- NAVYAAN-GLOW-NAV-TOASTER -->
-              </div>
+                <div id="nav-global-location-toaster-script-container" class="nav-progressive-content"> 
+                <!-- NAVYAAN-GLOW-NAV-TOASTER -->
+                </div>
             </div>
+            
+            
+            
             <div class='nav-fill'>
-              <div id="nav-search">
-                <div id="nav-bar-left"></div>
-                <form
-                  id="nav-search-bar-form"
-                  accept-charset="utf-8"
-                  action="/s/ref=nb_sb_noss"
-                  class="nav-searchbar nav-progressive-attribute"
-                  method="GET"
-                  name="site-search"
-                  role="search"
-                >
-                  <div id="nav-search-bar-internationalization-key" class="nav-progressive-content">
-                    <input type="hidden" name="" value="MH">
-                  </div>
-                  <div class="nav-left">
-                    <div id="nav-search-dropdown-card">
-                      <div class="nav-search-scope nav-sprite">
-                        <div class="nav-search-facade" data-value="search-alias=aps">
-                          <span id="nav-search-label-id" class="nav-search-label nav-progressive-content">Buscar en</span>
-                          <i class="nav-icon"></i>
+                <div id="nav-search">
+                    <div id="nav-bar-left"></div>
+                    <form
+                        id="nav-search-bar-form"
+                        accept-charset="utf-8"
+                        action="/s/ref=nb_sb_noss"
+                        class="nav-searchbar nav-progressive-attribute"
+                        method="GET"
+                        name="site-search"
+                        role="search"
+                        >
+                        <div id="nav-search-bar-internationalization-key" class="nav-progressive-content">
+                            <input type="hidden" name="" value="MH">
                         </div>
-                        <span id="searchDropdownDescription" class="nav-progressive-attribute" style="display:none">Selecciona la categoria donde deseas realizar tu búsqueda</span>
-                        <select
-                          aria-describedby="searchDropdownDescription"
-                          class="nav-search-dropdown searchSelect nav-progressive-attribute nav-progressive-search-dropdown"
-                          data-nav-digest="eLdESk5hiOGGQnk0N8RQ6jGNNhs="
-                          data-nav-selected="0"
-                          id="searchDropdownBox"
-                          name="url"
-                          style="display: block;"
-                          tabindex="0"
-                          title="Buscar en"
-                          >
-                          <option selected="selected" value="search-alias=aps">Todos las categorias</option>
-                          <option value="search-alias=arts-crafts-intl-ship">Manijas</option>
-                          <option value="search-alias=automotive-intl-ship">Bisagras</option>
-                          <option value="search-alias=baby-products-intl-ship">Correderas</option>
-                          <option value="search-alias=beauty-intl-ship">Kit de Placad</option>
-                          <option value="search-alias=computers-intl-ship">Accesorios de cocina</option>
-                          <option value="search-alias=electronics-intl-ship">Tapacantos</option>
-                          <option value="search-alias=stripbooks-intl-ship">Pistones</option>
-                          <option value="search-alias=digital-music">Pistones</option>
-                          <option value="search-alias=instant-video">Perfil tapacanto</option>
-                          <option value="search-alias=digital-text">Accesorios de Placard</option>
-                          <option value="search-alias=fashion-womens-intl-ship">Caño Oval</option>
-                          <option value="search-alias=fashion-mens-intl-ship">Perfil Manija</option>
-                          <option value="search-alias=fashion-girls-intl-ship">Accesorios de Baño</option>
-                          <option value="search-alias=fashion-boys-intl-ship">Perfil Puerta</option>
-                          <option value="search-alias=movies-tv-intl-ship">Otros Perfiles</option>
-                          <option value="search-alias=sporting-intl-ship">Herrajes para muebles</option>
-                          <option value="search-alias=luggage-intl-ship">Tornillos</option>
-                          <option value="search-alias=tools-intl-ship">Cubierteros</option>
-                          <option value="search-alias=kitchen-intl-ship">Cerraduras</option>
-                          <option value="search-alias=industrial-intl-ship">Ruedas</option>
-                          <option value="search-alias=pets-intl-ship">Mensulas</option>
-                          <option value="search-alias=toys-and-games-intl-ship">Patas</option>
-                          <option value="search-alias=music-intl-ship">Luces de LED</option>
-                          <option value="search-alias=deals-intl-ship">Destapadores</option>
-                          <option value="search-alias=hpc-intl-ship">Vidrio Templado</option>
-                          <option value="search-alias=software-intl-ship">Pisos de Aluminio</option>
-                          <option value="search-alias=videogames-intl-ship">Accesorios de Lavadero</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nav-fill">
-                    <div class="nav-search-field ">
-                      <input
-                        type="text"
-                        id="twotabsearchtextbox"
-                        value=""
-                        name="keyword"
-                        autocomplete="off"
-                        placeholder=""
-                        class="nav-input nav-progressive-attribute"
-                        dir="auto"
-                        tabindex="0"
-                        aria-label="Buscar"
-                      >
-                    </div>
-                    <div id="nav-iss-attach"></div>
-                  </div>
-                  <div class="nav-right">
-                    <div class="nav-search-submit nav-sprite">
-                      <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Ir">
-                        <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Ir" tabindex="0">
-                      </span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-
-
-            <div class='nav-right'>
-              <div id='nav-tools' class="layoutToolbarPadding">  
-                  
-                <!--
-                <a href="https://hsj.com.ar/signIn/" class="nav-a nav-a-2   nav-progressive-attribute" data-nav-ref="nav_ya_signin"  data-nav-role="signin" data-ux-jq-mouseenter="true" id="nav-link-accountList" tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav-link-accountList" data-csa-c-content-id="nav_ya_signin">
-                  <div class="nav-line-1-container">
-                    <span id="nav-link-accountList-nav-line-1" class="nav-line-1 nav-progressive-content">Hola, Identifícate</span>
-                  </div>
-                  <span class="nav-line-2 nav-long-width">Cuenta y Listas
-                    <span class="nav-icon nav-arrow"></span>
-                  </span>
-                  <span class="nav-line-2 nav-short-width">Cuenta
-                    <span class="nav-icon nav-arrow"></span>
-                  </span>
-                </a>
-
-                <a href="/order-history/" class="nav-a nav-a-2   nav-progressive-attribute" id="nav-orders" tabindex="0">
-                  <span class="nav-line-1">Devoluciones</span>
-                  <span class="nav-line-2">y Pedidos</span>
-                </a>
-                -->
-
-
-                <div id="nav-global-location-slot">
-                    <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Elige tu ubicación&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;Gateway&amp;storeContext&#x3D;NoStoreName&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Listo&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Elige tu ubicación&quot;}' data-action="a-modal">
-                        <a id="nav-global-location-popover-link" class="nav-a nav-a-2 a-popover-trigger a-declarative nav-progressive-attribute" tabindex="0">
-                            <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
-                            <div id="glow-ingress-block">
-                                <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
-                                    Enviar a
-                                </span>
-                                <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
-                                    Caseros
+                        <div class="nav-left">
+                            <div id="nav-search-dropdown-card">
+                                <div class="nav-search-scope nav-sprite">
+                                    <div class="nav-search-facade" data-value="search-alias=aps">
+                                        <span id="nav-search-label-id" class="nav-search-label nav-progressive-content">Buscar en</span>
+                                        <i class="nav-icon"></i>
+                                    </div>
+                                    <span id="searchDropdownDescription" class="nav-progressive-attribute" style="display:none">Selecciona la categoria donde deseas realizar tu búsqueda</span>
+                                    <select
+                                        aria-describedby="searchDropdownDescription"
+                                        class="nav-search-dropdown searchSelect nav-progressive-attribute nav-progressive-search-dropdown"
+                                        data-nav-digest="eLdESk5hiOGGQnk0N8RQ6jGNNhs="
+                                        data-nav-selected="0"
+                                        id="searchDropdownBox"
+                                        name="url"
+                                        style="display: block;"
+                                        tabindex="0"
+                                        title="Buscar en"
+                                        >
+                                        <option selected="selected" value="search-alias=aps">Todos las categorias</option>
+                                        <option value="search-alias=arts-crafts-intl-ship">Manijas</option>
+                                        <option value="search-alias=automotive-intl-ship">Bisagras</option>
+                                        <option value="search-alias=baby-products-intl-ship">Correderas</option>
+                                        <option value="search-alias=beauty-intl-ship">Kit de Placad</option>
+                                        <option value="search-alias=computers-intl-ship">Accesorios de cocina</option>
+                                        <option value="search-alias=electronics-intl-ship">Tapacantos</option>
+                                        <option value="search-alias=stripbooks-intl-ship">Pistones</option>
+                                        <option value="search-alias=digital-music">Pistones</option>
+                                        <option value="search-alias=instant-video">Perfil tapacanto</option>
+                                        <option value="search-alias=digital-text">Accesorios de Placard</option>
+                                        <option value="search-alias=fashion-womens-intl-ship">Caño Oval</option>
+                                        <option value="search-alias=fashion-mens-intl-ship">Perfil Manija</option>
+                                        <option value="search-alias=fashion-girls-intl-ship">Accesorios de Baño</option>
+                                        <option value="search-alias=fashion-boys-intl-ship">Perfil Puerta</option>
+                                        <option value="search-alias=movies-tv-intl-ship">Otros Perfiles</option>
+                                        <option value="search-alias=sporting-intl-ship">Herrajes para muebles</option>
+                                        <option value="search-alias=luggage-intl-ship">Tornillos</option>
+                                        <option value="search-alias=tools-intl-ship">Cubierteros</option>
+                                        <option value="search-alias=kitchen-intl-ship">Cerraduras</option>
+                                        <option value="search-alias=industrial-intl-ship">Ruedas</option>
+                                        <option value="search-alias=pets-intl-ship">Mensulas</option>
+                                        <option value="search-alias=toys-and-games-intl-ship">Patas</option>
+                                        <option value="search-alias=music-intl-ship">Luces de LED</option>
+                                        <option value="search-alias=deals-intl-ship">Destapadores</option>
+                                        <option value="search-alias=hpc-intl-ship">Vidrio Templado</option>
+                                        <option value="search-alias=software-intl-ship">Pisos de Aluminio</option>
+                                        <option value="search-alias=videogames-intl-ship">Accesorios de Lavadero</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-fill">
+                            <div class="nav-search-field ">
+                                <input
+                                type="text"
+                                id="twotabsearchtextbox"
+                                value=""
+                                name="keyword"
+                                autocomplete="off"
+                                placeholder=""
+                                class="nav-input nav-progressive-attribute"
+                                dir="auto"
+                                tabindex="0"
+                                aria-label="Buscar"
+                                >
+                            </div>
+                            <div id="nav-iss-attach"></div>
+                        </div>
+                        <div class="nav-right">
+                            <div class="nav-search-submit nav-sprite">
+                                <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Ir">
+                                    <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Ir" tabindex="0">
                                 </span>
                             </div>
-                        </a>
-                    </span>
-                    <input data-addnewaddress="add-new" id="unifiedLocation1ClickAddress" name="dropdown-selection" type="hidden" value="add-new" class="nav-progressive-attribute" />
-                    <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute"/>
-                    <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="" class="nav-progressive-attribute"/>
+                        </div>
+                    </form>
                 </div>
+            </div>
+
+
+
+            <div class='nav-right'>
+                <div id='nav-tools' class="layoutToolbarPadding">  
+                
+                    <!--
+                    <a href="https://hsj.com.ar/signIn/" class="nav-a nav-a-2   nav-progressive-attribute" data-nav-ref="nav_ya_signin"  data-nav-role="signin" data-ux-jq-mouseenter="true" id="nav-link-accountList" tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav-link-accountList" data-csa-c-content-id="nav_ya_signin">
+                    <div class="nav-line-1-container">
+                        <span id="nav-link-accountList-nav-line-1" class="nav-line-1 nav-progressive-content">Hola, Identifícate</span>
+                    </div>
+                    <span class="nav-line-2 nav-long-width">Cuenta y Listas
+                        <span class="nav-icon nav-arrow"></span>
+                    </span>
+                    <span class="nav-line-2 nav-short-width">Cuenta
+                        <span class="nav-icon nav-arrow"></span>
+                    </span>
+                    </a>
+
+                    <a href="/order-history/" class="nav-a nav-a-2   nav-progressive-attribute" id="nav-orders" tabindex="0">
+                    <span class="nav-line-1">Devoluciones</span>
+                    <span class="nav-line-2">y Pedidos</span>
+                    </a>
+                    -->
+
+
+                    <div id="nav-global-location-slot">
+                        <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Elige tu ubicación&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;Gateway&amp;storeContext&#x3D;NoStoreName&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Listo&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Elige tu ubicación&quot;}' data-action="a-modal">
+                            <a id="nav-global-location-popover-link" class="nav-a nav-a-2 a-popover-trigger a-declarative nav-progressive-attribute" tabindex="0">
+                                <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
+                                <div id="glow-ingress-block">
+                                    <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
+                                        Enviar a
+                                    </span>
+                                    <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
+                                        Caseros
+                                    </span>
+                                </div>
+                            </a>
+                        </span>
+                        <input data-addnewaddress="add-new" id="unifiedLocation1ClickAddress" name="dropdown-selection" type="hidden" value="add-new" class="nav-progressive-attribute" />
+                        <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute"/>
+                        <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="" class="nav-progressive-attribute"/>
+                    </div>
     
 
-
-
-
-
-                <a href="/cart/" aria-label="0 artículos en el carrito" class="nav-a nav-a-2 nav-progressive-attribute" id="nav-cart">
-                  <div id="nav-cart-count-container">
-                    <span id="nav-cart-count" aria-hidden="true" class="nav-cart-count nav-cart-0 nav-progressive-attribute nav-progressive-content">0</span>
-                    <span class="nav-cart-icon nav-sprite"></span>
-                  </div>
-                  <div id="nav-cart-text-container" class=" nav-progressive-attribute">
-                    <span aria-hidden="true" class="nav-line-1">
-                      
-                    </span>
-                    <span aria-hidden="true" class="nav-line-2">
-                      Carrito
-                      <span class="nav-icon nav-arrow"></span>
-                    </span>
-                  </div>
-                </a>
-              </div>
+                    <a href="/cart/" aria-label="0 artículos en el carrito" class="nav-a nav-a-2 nav-progressive-attribute" id="nav-cart">
+                        <div id="nav-cart-count-container">
+                            <span id="nav-cart-count" aria-hidden="true" class="nav-cart-count nav-cart-0 nav-progressive-attribute nav-progressive-content">0</span>
+                            <span class="nav-cart-icon nav-sprite"></span>
+                        </div>
+                        <div id="nav-cart-text-container" class=" nav-progressive-attribute">
+                            <span aria-hidden="true" class="nav-line-1">                            
+                            </span>
+                            <span aria-hidden="true" class="nav-line-2">
+                                Carrito
+                                <span class="nav-icon nav-arrow"></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </div>
+        </div>
 
 
 
 
-          <div id='nav-main' class='nav-sprite'>
+        <div id='nav-main' class='nav-sprite'>
             <div class='nav-left'>
-              <a href="/site-directory?ref_=nav_em_js_disabled" id="nav-hamburger-menu" role="button" aria-label="Abrir menú" data-csa-c-type="widget" data-csa-c-slot-id="HamburgerMenuDesktop" data-csa-c-interaction-events="click" >
-                <i class="hm-icon nav-sprite"></i>
-                <span class="hm-icon-label">Todo</span>
-              </a>  
+                <a href="/site-directory?ref_=nav_em_js_disabled" id="nav-hamburger-menu" role="button" aria-label="Abrir menú" data-csa-c-type="widget" data-csa-c-slot-id="HamburgerMenuDesktop" data-csa-c-interaction-events="click" >
+                    <i class="hm-icon nav-sprite"></i>
+                    <span class="hm-icon-label">Todo</span>
+                </a>  
             </div>
             <div class='nav-fill'>
-              <div id="nav-shop">
-            </div>
-            <div id='nav-xshop-container'>
-              <div id='nav-xshop' class="nav-progressive-content">
-                <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
-                  <a href="https://hsj.com.ar/MAYORISTA-c61581624" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_0">MAYORISTA</a>
-                  <a href="https://hsj.com.ar/PRODUCTOS-c57904553" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_1">Productos</a>
-                  <a href="https://hsj.com.ar/OFERTAS-c57581322" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_2">Ofertas del dia</a>
-                  <a href="https://hsj.com.ar/HAFELE-c62808386" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_3">HAFELE</a>
-                  <a href="https://hsj.com.ar/Perfiles-de-aluminio-c64555615" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_4">Perfiles</a>
-                  <a href="https://hsj.com.ar/Oferta-Domes-c69184693" aria-label="Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" class="nav-hidden-aria  " tabindex="0"  data-csa-c-type="link" data-csa-c-slot-id="nav_cs_5" >Oferta Domes</a>
-                  <script type='text/javascript'>window.navmet.push({key:'CrossShop',end:+new Date(),begin:window.navmet.tmp});</script>
+                <div id="nav-shop">
                 </div>
-              </div>
+                <div id='nav-xshop-container'>
+                    <div id='nav-xshop' class="nav-progressive-content">
+                        <a href="https://hsj.com.ar/MAYORISTA-c61581624" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_0">MAYORISTA</a>
+                        <a href="https://hsj.com.ar/PRODUCTOS-c57904553" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_1">Productos</a>
+                        <a href="https://hsj.com.ar/OFERTAS-c57581322" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_2">Ofertas del dia</a>
+                        <a href="https://hsj.com.ar/HAFELE-c62808386" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_3">HAFELE</a>
+                        <a href="https://hsj.com.ar/Perfiles-de-aluminio-c64555615" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_4">Perfiles</a>
+                        <a href="https://hsj.com.ar/Oferta-Domes-c69184693" aria-label="Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" class="nav-hidden-aria  " tabindex="0"  data-csa-c-type="link" data-csa-c-slot-id="nav_cs_5" >Oferta Domes</a>
+                    </div>
+                </div>
             </div>
+
             <div class='nav-right'>
-              \<div id="nav-swmslot" class="nav-swm-text-widget">
-                <a href="/customer-preferences/" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content"></a>
-              </div>
-            </div>
-          </div>
-          <div id='nav-subnav-toaster'></div>    
-          <div id="nav-progressive-subnav"></div>
-        </div>
-      </header>
-
-
-
-
-
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{% static '/images/slider0.jpg' %}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{% static '/images/slider1.jpg' %}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{% static '/images/slider2.jpg' %}" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{% static '/images/slider3.jpg' %}" alt="Third slide">
+                <div id="nav-swmslot" class="nav-swm-text-widget">
+                    <a href="/customer-preferences/" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content"></a>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div id='nav-subnav-toaster'></div>    
+        <div id="nav-progressive-subnav"></div>
     </div>
-    <script>$('.carousel').carousel()</script>
+</header>
 
 
 
 
 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static '/images/slider0.jpg' %}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static '/images/slider1.jpg' %}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static '/images/slider2.jpg' %}" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static '/images/slider3.jpg' %}" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js"></script>    
+<script>$('.carousel').carousel()</script>
+<script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js"></script>    
 </body>
 </html>
