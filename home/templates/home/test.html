@@ -178,7 +178,7 @@
         body { font-family: sans-serif; }
 
         .carousel {
-        background: #FAFAFA;
+        background:linear-gradient(-180deg,rgba(234,237,237,0),#eaeded);
         overflow:visible;
         }
 
@@ -200,6 +200,19 @@
         align-items: center;
         justify-content: center;
         }
+
+        .carousel-image {
+            display: block;
+            height: 200px;
+            /* set min-width,
+               allow images to determine cell width */
+            min-width: 150px;
+            max-width: 100%;
+            margin-right: 10px;
+            /* vertically center */
+            top: 50%;
+            transform: translateY(-50%)
+          }
     </style>
 
 
@@ -429,19 +442,19 @@
             <div id='nav-xshop-container'>
               <div id='nav-xshop' class="nav-progressive-content">
                 <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
-                  <a href="" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_0">MAYORISTA</a>
-                  <a href="" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_1">Productos</a>
-                  <a href="" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_2">Ofertas del dia</a>
-                  <a href="" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_3">HAFELE</a>
-                  <a href="" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_4">Perfiles</a>
-                  <a href="" aria-label="Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" class="nav-hidden-aria  " tabindex="0"  data-csa-c-type="link" data-csa-c-slot-id="nav_cs_5" >Oferta Domes</a>
+                  <a href="https://hsj.com.ar/MAYORISTA-c61581624" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_0">MAYORISTA</a>
+                  <a href="https://hsj.com.ar/PRODUCTOS-c57904553" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_1">Productos</a>
+                  <a href="https://hsj.com.ar/OFERTAS-c57581322" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_2">Ofertas del dia</a>
+                  <a href="https://hsj.com.ar/HAFELE-c62808386" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_3">HAFELE</a>
+                  <a href="https://hsj.com.ar/Perfiles-de-aluminio-c64555615" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_4">Perfiles</a>
+                  <a href="https://hsj.com.ar/Oferta-Domes-c69184693" aria-label="Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" class="nav-hidden-aria  " tabindex="0"  data-csa-c-type="link" data-csa-c-slot-id="nav_cs_5" >Oferta Domes</a>
                   <script type='text/javascript'>window.navmet.push({key:'CrossShop',end:+new Date(),begin:window.navmet.tmp});</script>
                 </div>
               </div>
             </div>
             <div class='nav-right'>
               \<div id="nav-swmslot" class="nav-swm-text-widget">
-                <a href="/-/es/gp/customer-preferences/" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content"></a>
+                <a href="/customer-preferences/" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content"></a>
               </div>
             </div>
           </div>
@@ -455,7 +468,7 @@
     
     <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js" ></script>
     
-    <div id="Carousel1" class="carousel slide" data-ride="carousel">
+    <div id="Carousel1" class="carousel" data-ride="carousel">
         <ol>
             <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
             <li data-target="#Carousel1" data-slide-to="1"></li>
@@ -465,22 +478,22 @@
     
         <div class="carousel-inner">
             <div class="item active">
-                <div class="img-container">
+                <div class="carousel-image">
                     <img src="{% static '/images/slider0.jpg' %}">
                 </div>
             </div>
             <div class="item">
-                <div class="img-container">
+                <div class="carousel-image">
                     <img src="{% static '/images/slider1.jpg' %}">
                 </div>
             </div>
             <div class="item">
-                <div class="img-container">
+                <div class="carousel-image">
                     <img src="{% static '/images/slider2.jpg' %}">
                 </div>
             </div>
             <div class="item">
-                <div class="img-container">
+                <div class="carousel-image">
                     <img src="{% static '/images/slider3.jpg' %}">
                 </div>
             </div>
