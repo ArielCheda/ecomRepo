@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('store.urls')),
+    path('test', inicio),
     path('registro/', admin.site.urls),    
     path('pedidos/', include('pedidos.urls')),
     path('lista/', include('listaDePrecios.urls')),

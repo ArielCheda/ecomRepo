@@ -171,24 +171,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link href="https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css" rel="stylesheet">
-    <!-- Compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-    <!-- Minified JS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     
             
 </head>
 
 <body>
+    {% extends 'ecommerce/head.html' %}
+    {% extends 'ecommerce/header.html' %}
     <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js" ></script>
-    
-    <div id="my-categories-34512951"></div>
-    <div>
-        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?34512951&data_platform=code&data_date=2021-01-09" charset="utf-8"></script>
-        <script type="text/javascript"> xCategoriesV2("id=my-categories-34512951"); </script>
-    </div>
+    {% extends 'ecommerce/carousel.html' %}
     
     <script src="https://d35z3p2poghz10.cloudfront.net/ecwid-sdk/css/1.3.9/ecwid-app-ui.min.js"></script>    
 </body>
