@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'listaDePrecios.apps.ListadepreciosConfig',
     'entregas.apps.EntregasConfig',
     'store.apps.StoreConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [

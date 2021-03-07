@@ -15,18 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from ecommerce.views import inicio
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', include('store.urls')),
-    path('test', inicio),
     path('registro/', admin.site.urls),    
+    path('', include('store.urls')),
     path('pedidos/', include('pedidos.urls')),
     path('lista/', include('listaDePrecios.urls')),
     path('entregas/', include('entregas.urls')),
-
+    path('test/', include('home.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
