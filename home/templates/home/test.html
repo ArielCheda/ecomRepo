@@ -274,19 +274,19 @@
         </div>
       </header>
 
-    <div style="position: absolute; top: 250px; height: 300px;">
+    <div class="flickity-viewport" style="height:300px; top:250px; position: absolute;">
         <div class="carousel" data-flickity='{ "autoPlay": 1000, "pauseAutoPlayOnHover": false, "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "setGallerySize": false, "wrapAround": true }'>
             <div class="carousel-cell carousel-image-cell--wide">
-                <img class="carousel__lazy-image" data-flickity-lazyload="{% static '/images/slider0.jpg' %}">
+                <img class="carousel__lazy-image" src="{% static '/images/slider0.jpg' %}">
             </div>
             <div class="carousel-cell carousel-image-cell--wide">
-                <img class="carousel__lazy-image" data-flickity-lazyload="{% static '/images/slider1.jpg' %}">
+                <img class="carousel__lazy-image" src="{% static '/images/slider1.jpg' %}">
             </div>
             <div class="carousel-cell carousel-image-cell--wide">
-                <img class="carousel__lazy-image" data-flickity-lazyload="{% static '/images/slider2.jpg' %}">
+                <img class="carousel__lazy-image" src="{% static '/images/slider2.jpg' %}">
             </div>
             <div class="carousel-cell carousel-image-cell--wide">
-                <img class="carousel__lazy-image" data-flickity-lazyload="{% static '/images/slider3.jpg' %}">
+                <img class="carousel__lazy-image" src="{% static '/images/slider3.jpg' %}">
             </div>
         </div>
     </div>
